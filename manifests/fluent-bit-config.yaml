@@ -10,7 +10,7 @@ data:
     [INPUT]
       Name              tail
       Tag               kube.*
-      Path              /var/log/containers/*.log
+      Path              /var/log/containers/demo-server*.log
       Parser            docker
       DB                /fluent-bit/tail_docker.db
       Mem_Buf_Limit     7MB
