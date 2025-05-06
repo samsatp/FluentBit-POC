@@ -30,6 +30,13 @@ data:
     [OUTPUT]
       Name  stdout
       Match *
+    
+    [OUTPUT]
+      name   loki
+      host   loki
+      port   3100
+      match  *
+      labels job=fluentbit, $sub['stream']
 
   parsers.conf: |
       [PARSER]
